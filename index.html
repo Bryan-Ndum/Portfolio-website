@@ -8,36 +8,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <section class="cyber-hero">
-    <!-- Optional online background image overlay -->
-    <div class="hero-bg"></div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>Bryan Ndum</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+    </ul>
+  </nav>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1 class="cyber-typewriter" id="cyber-type"></h1>
-      <p class="subtext">Cybersecurity | Network Defense | Ethical Hacking | AI Systems</p>
-      <a href="projects.html" class="cyber-btn">View My Work</a>
-
-      <!-- Optional Social Icons -->
-      <div class="social-links">
-        <a href="https://github.com/BryanNBN" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/bryanndum" target="_blank">LinkedIn</a>
-        <a href="mailto:bryan@example.com">Email</a>
-      </div>
+      <h1>Hello, welcome to my portfolio. I am Bryan Ndum.</h1>
+      <p>Cybersecurity | Network Defense | Ethical Hacking | AI Systems</p>
+      <a href="about.html" class="btn">Learn More About Me</a>
     </div>
   </section>
-
-  <script>
-    const cyberText = \">> Initiating Portfolio: Bryan Ndum\";
-    let i = 0;
-    function typeCyber() {
-      if (i < cyberText.length) {
-        document.getElementById(\"cyber-type\").innerHTML += cyberText.charAt(i);
-        i++;
-        setTimeout(typeCyber, 60);
-      }
-    }
-    window.onload = typeCyber;
-  </script>
 </body>
 </html>
+
 
