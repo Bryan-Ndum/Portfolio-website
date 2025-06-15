@@ -7,29 +7,9 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 </head>
-
-  <script>
-  function toggleMenu() {
-    const links = document.getElementById('nav-links');
-    links.classList.toggle('active');
-  }
-</script>
-
-  <script>
-  fetch('navbar.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('navbar-placeholder').innerHTML = data;
-    });
-</script>
-<script src="nav.js"></script>
-
 <body>
-  <!-- Navbar -->
-
-<div id="navbar-placeholder"></div>
-
-   
+  <!-- Load shared navbar -->
+  <div id="navbar-placeholder"></div>
 
   <!-- Projects Section -->
   <section class="section">
@@ -39,23 +19,36 @@
       <div class="project-card">
         <img src="https://images.unsplash.com/photo-1581093588401-3a11f2ed1d69?auto=format&fit=crop&w=900&q=80" alt="VenomAI">
         <h3>VenomAI</h3>
-        <p>AI-powered red team assistant that automates reconnaissance, attack simulation, and defensive countermeasures. Built for competition and won HackUNCP.</p>
+        <p>An AI-powered red team assistant that automates reconnaissance, attack simulation, and countermeasures. Built to simulate real-world threats. 🧠</p>
       </div>
 
       <div class="project-card">
         <img src="https://images.unsplash.com/photo-1667382028353-63ccdbdd5e6e?auto=format&fit=crop&w=900&q=80" alt="AfroSecure">
         <h3>AfroSecure</h3>
-        <p>Cybersecurity education and scam awareness app tailored for African freelancers and creators. Built to empower and protect underserved tech communities.</p>
+        <p>A cybersecurity education app tailored to African freelancers, streamlining digital literacy and scam awareness across the continent. 🌍</p>
       </div>
 
       <div class="project-card">
         <img src="https://images.unsplash.com/photo-1624431894000-9d1ddee49c8a?auto=format&fit=crop&w=900&q=80" alt="SDN Research">
         <h3>SDN DDoS Simulation</h3>
-        <p>Designed and simulated DDoS attacks in Software Defined Networks using P4 and Open vSwitch. Evaluated prevention strategies in programmable environments.</p>
+        <p>Simulated DDoS attacks using P4, Mininet, and OVS to test reactive defenses in programmable networks. 🛡️</p>
       </div>
 
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1638764456815-e17c7147506b?auto=format&fit=crop&w=900&q=80" alt="ZegsPay">
+        <h3>ZegsPay</h3>
+        <p>Blockchain-powered remittance platform for fast, secure money transfers from Cameroon to the U.S. Supports mobile money integration. 💸</p>
+      </div>
 
     </div>
   </section>
+
+  <!-- Scripts -->
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => { document.getElementById('navbar-placeholder').innerHTML = html; });
+  </script>
+  <script src="nav.js"></script>
 </body>
 </html>
