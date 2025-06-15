@@ -2,35 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bryan Ndum | Cybersecurity Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
 </head>
 <body>
-  <!-- Navbar Placeholder -->
-  <div id="navbar-placeholder"></div>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="typewriter" style="animation-delay: 0s;">Hello, welcome to my portfolio.</h1>
       <h1 class="typewriter" style="animation-delay: 3.5s;">I am Bryan Ndum.</h1>
-      <p class="fade-in" style="animation-delay: 7s;">Cybersecurity | Network Defense | Ethical Hacking | AI Systems</p>
-      <a href="about.html" class="btn fade-in" style="animation-delay: 8.2s;">Learn More About Me</a>
+      <p class="subtext">Cybersecurity | Network Defense | Ethical Hacking | AI Systems</p>
+      <a href="about.html" class="btn">Learn More About Me</a>
     </div>
   </section>
 
-  <!-- Scripts -->
-  <script>
-    fetch('navbar.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('navbar-placeholder').innerHTML = html;
-      });
-  </script>
-  <script src="nav.js"></script>
+  <!-- 🔻 Footer Menu Starts Here -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Bryan Ndum. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/BryanNBN" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/bryanndum" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <!-- 🔺 Footer Menu Ends Here -->
+
 </body>
 </html>
 
