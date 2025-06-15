@@ -93,7 +93,7 @@ a:hover {
   white-space: nowrap;
   border-right: 3px solid var(--primary);
   width: 0;
-  animation: typing 4.5s steps(60, end) forwards, blink 0.75s step-end 8;
+  animation: typing 4.5s steps(75, end) forwards, blink 0.75s step-end 8;
   font-size: 1.8rem;
   max-width: 100%;
 }
