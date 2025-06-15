@@ -7,34 +7,14 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 </head>
-
-<script>
-  function toggleMenu() {
-    const links = document.getElementById('nav-links');
-    links.classList.toggle('active');
-  }
-</script>
-
-<script>
-  fetch('navbar.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('navbar-placeholder').innerHTML = data;
-    });
-</script>
-<script src="nav.js"></script>
-  
 <body>
-  <!-- Navbar -->
-<div id="navbar-placeholder"></div>
-
-
+  <!-- Load shared navbar -->
+  <div id="navbar-placeholder"></div>
 
   <!-- Skills Section -->
   <section class="section">
     <h2>Core Skills</h2>
     <div class="skills-grid">
-
       <div class="skill-box">Python</div>
       <div class="skill-box">JavaScript</div>
       <div class="skill-box">Bash</div>
@@ -42,15 +22,23 @@
       <div class="skill-box">Git & GitHub</div>
       <div class="skill-box">Docker</div>
       <div class="skill-box">Wireshark</div>
+      <div class="skill-box">Open vSwitch (OVS)</div>
       <div class="skill-box">P4 Programming</div>
-      <div class="skill-box">Open vSwitch</div>
       <div class="skill-box">Mininet</div>
       <div class="skill-box">Cloud Security</div>
-      <div class="skill-box">Vulnerability Management</div>
       <div class="skill-box">Threat Detection</div>
-      <div class="skill-box">Network Monitoring</div>
-
+      <div class="skill-box">Vulnerability Management</div>
+      <div class="skill-box">Incident Response</div>
     </div>
   </section>
+
+  <!-- Scripts -->
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => { document.getElementById('navbar-placeholder').innerHTML = html; });
+  </script>
+  <script src="nav.js"></script>
 </body>
 </html>
+
