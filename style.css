@@ -1,3 +1,4 @@
+
 :root {
   --primary: #00ffc3;
   --hover: #66ffe0;
@@ -7,7 +8,6 @@
   --border: #1f2937;
 }
 
-/* === GLOBAL === */
 body {
   margin: 0;
   font-family: 'Share Tech Mono', monospace;
@@ -17,6 +17,7 @@ body {
   line-height: 1.8;
   letter-spacing: 0.4px;
 }
+
 a {
   color: var(--primary);
   text-decoration: none;
@@ -38,7 +39,8 @@ a:hover {
   top: 0;
   z-index: 1000;
 }
-.navbar h1 {
+.navbar h1 a {
+  color: var(--primary);
   font-size: 1.4rem;
 }
 .menu-toggle {
@@ -80,13 +82,27 @@ a:hover {
   max-width: 700px;
   padding: 2rem;
 }
-.hero-content h1 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-}
 .hero-content p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
+}
+
+/* === TYPEWRITER ANIMATION === */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--primary);
+  width: 0;
+  animation: typing 4.5s steps(60, end) forwards, blink 0.75s step-end 8;
+  font-size: 1.8rem;
+  max-width: 100%;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
 }
 
 /* === BUTTONS === */
@@ -103,93 +119,6 @@ a:hover {
 .btn:hover {
   background: var(--primary);
   color: var(--background);
-}
-
-/* === SECTIONS === */
-.section {
-  padding: 4rem 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary);
-}
-.section p, .section ul {
-  color: var(--text);
-}
-.section ul {
-  padding-left: 1rem;
-}
-
-/* === PROJECTS === */
-.project-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-.project-card {
-  background: var(--accent);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-.project-card:hover {
-  transform: scale(1.02);
-}
-.project-card img {
-  width: 100%;
-  display: block;
-}
-.project-card h3 {
-  padding: 1rem;
-  margin: 0;
-  font-size: 1.3rem;
-}
-.project-card p {
-  padding: 0 1rem 1rem;
-  margin: 0;
-  color: var(--text);
-  font-size: 1.05rem;
-}
-
-/* === SKILLS === */
-.skills-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  text-align: center;
-}
-.skill-box {
-  background: var(--accent);
-  padding: 1.5rem;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-/* === CONTACT FORM === */
-form input,
-form textarea {
-  background: var(--accent);
-  border: none;
-  border-radius: 5px;
-  color: var(--text);
-  font-family: 'Share Tech Mono', monospace;
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.8rem;
-  font-size: 1.1rem;
-}
-form textarea {
-  resize: vertical;
-}
-form button[type="submit"] {
-  cursor: pointer;
-  font-size: 1.1rem;
 }
 
 /* === FOOTER === */
@@ -229,45 +158,8 @@ form button[type="submit"] {
   color: var(--hover);
   text-decoration: underline;
 }
-@media (max-width: 500px) {
-  .footer-links,
-  .footer-socials {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-}
 
-/* === ANIMATIONS === */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s ease-out forwards;
-  animation-fill-mode: both;
-}
-.fade-in[style*="animation-delay"] {
-  animation-delay: inherit;
-}
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.typewriter {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  display: block;
-  border-right: none;
-  animation: typing 3s steps(30, end) forwards;
-  animation-fill-mode: forwards;
-}
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* === MOBILE NAV === */
+/* === MOBILE RESPONSIVE === */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -290,9 +182,23 @@ form button[type="submit"] {
     padding: 0.6rem 0;
     font-size: 1.1rem;
   }
+  .hero-content h1 {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
+  .footer-links,
+  .footer-socials {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
 }
-
-
 
 
 
