@@ -155,3 +155,57 @@ a:hover {
   border: 1px solid #1f2937;
   font-weight: bold;
 }
+
+/* ------------------------------
+   MOBILE RESPONSIVENESS
+------------------------------ */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero-content {
+    padding: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .skills-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-box,
+  .project-card {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+
