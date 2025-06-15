@@ -8,10 +8,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 </head>
  
+
+<script>
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    });
 </script>
 <script src="nav.js"></script>
-</body>
-</html>
+
 
 <body>
   <!-- Navbar -->
