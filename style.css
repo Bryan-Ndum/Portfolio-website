@@ -13,7 +13,7 @@ body {
   font-family: 'Share Tech Mono', monospace;
   background-color: var(--background);
   color: var(--text);
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   line-height: 1.8;
   letter-spacing: 0.4px;
 }
