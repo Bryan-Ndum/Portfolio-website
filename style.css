@@ -1,84 +1,41 @@
-/* style.css */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f9fb;
-  color: #222;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.navbar {
-  background-color: #1e1e2f;
-  color: white;
-  padding: 1rem 2rem;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo a {
-  font-size: 1.5rem;
-  color: white;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: white;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover,
-.nav-links .active {
-  color: #00d4ff;
-}
-
 .hero {
-  padding: 5rem 2rem;
-  text-align: center;
-  background: linear-gradient(to right, #1a1a2e, #16213e);
+  background: radial-gradient(circle at top, #1f2235, #10121b);
   color: white;
+  padding: 7rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.hero h2 {
-  font-size: 2.5rem;
+.hero-text h2 {
+  font-size: 3.5rem;
   margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.6;
 }
 
 .btn {
   background-color: #00d4ff;
-  color: #1a1a2e;
-  padding: 0.75rem 1.5rem;
+  color: #10121b;
+  padding: 0.9rem 2rem;
   border-radius: 8px;
-  font-weight: bold;
-  margin-top: 1rem;
-  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .btn:hover {
   background-color: #00bcd4;
-}
-
-.content {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-}
-
-.projects-list {
-  padding-left: 1rem;
+  transform: translateY(-2px);
 }
