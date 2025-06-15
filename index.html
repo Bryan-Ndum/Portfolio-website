@@ -2,30 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bryan Ndum | Cybersecurity Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 </head>
 <body>
 
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <h1><a href="index.html">Bryan Ndum</a></h1>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1 class="typewriter" style="animation-delay: 0s;">Hello, welcome to my portfolio.</h1>
-      <h1 class="typewriter" style="animation-delay: 3.5s;">I am Bryan Ndum.</h1>
-      <p class="subtext">Cybersecurity | Network Defense | Ethical Hacking | AI Systems</p>
+      <h1 class="typewriter">Hello, welcome to my portfolio. I am Bryan Ndum.</h1>
+      <p>Cybersecurity | AI Security | Network Defense | Blockchain Security</p>
       <a href="about.html" class="btn">Learn More About Me</a>
     </div>
   </section>
 
-  <!-- 🔻 Footer Menu Starts Here -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
-      <p>&copy; 2025 Bryan Ndum. All rights reserved.</p>
       <div class="footer-links">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="skills.html">Skills</a>
         <a href="contact.html">Contact</a>
@@ -33,12 +43,19 @@
       <div class="footer-socials">
         <a href="https://github.com/BryanNBN" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/bryanndum" target="_blank">LinkedIn</a>
+        <a href="mailto:bryan@example.com">Email</a>
       </div>
+      <p>&copy; 2025 Bryan Ndum. All rights reserved.</p>
     </div>
   </footer>
-  <!-- 🔺 Footer Menu Ends Here -->
+
+  <!-- TOGGLE MENU SCRIPT -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navLinks');
+      menu.classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
-
-
