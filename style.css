@@ -242,3 +242,65 @@ a:hover {
 }
 
 
+
+
+/* Hide mobile menu by default */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #00ffcc;
+  cursor: pointer;
+}
+
+/* Default nav styles */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links li a {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
