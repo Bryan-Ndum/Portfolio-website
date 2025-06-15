@@ -1,121 +1,96 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f9fb;
-  color: #222;
-  line-height: 1.6;
+  font-family: 'Share Tech Mono', monospace;
+  background-color: #0a0f17;
+  color: #00ffea;
+  overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.navbar {
-  background-color: #1e1e2f;
-  color: white;
-  padding: 1rem 2rem;
-}
-
-.nav-container {
+.cyber-hero {
+  position: relative;
+  height: 100vh;
+  background: #0a0f17;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-.logo a {
-  font-size: 1.5rem;
-  color: white;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: white;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover,
-.nav-links .active {
-  color: #00d4ff;
-}
-
-.hero {
-  background: radial-gradient(circle at top, #1f2235, #10121b);
-  color: white;
-  padding: 7rem 2rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.hero-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-/* Typewriter animation */
-.typewriter {
-  display: inline-block;
+  text-align: center;
+  padding: 0 1rem;
   overflow: hidden;
-  border-right: 2px solid #00d4ff;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1624377633726-7536a798658d?auto=format&fit=crop&w=1450&q=80');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
+  filter: blur(3px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.cyber-typewriter {
+  font-size: 2rem;
+  color: #00ffea;
+  border-right: 2px solid #00ffea;
   white-space: nowrap;
-  width: 0;
-  animation: typing 3.5s steps(30, end) forwards, blink 0.75s step-end infinite;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #00d4ff;
-  margin-bottom: 1rem;
+  overflow: hidden;
+  animation: blink-caret 0.75s step-end infinite;
+  margin-bottom: 1.2rem;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 15ch; }
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #00ffea; }
 }
 
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 2s ease 3.6s forwards;
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-.hero-text p {
-  font-size: 1.3rem;
+.subtext {
+  font-size: 1.1rem;
+  color: #b2fefa;
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
-  max-width: 600px;
-  line-height: 1.6;
 }
 
-.btn {
-  background-color: #00d4ff;
-  color: #10121b;
-  padding: 0.9rem 2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: background 0.3s ease, transform 0.2s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.cyber-btn {
+  background: transparent;
+  border: 2px solid #00ffea;
+  color: #00ffea;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
-.btn:hover {
-  background-color: #00bcd4;
-  transform: translateY(-2px);
+.cyber-btn:hover {
+  background: #00ffea;
+  color: #0a0f17;
+  transform: scale(1.05);
+}
+
+.social-links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-links a {
+  color: #00ffea;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px dashed transparent;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  border-color: #00ffea;
 }
