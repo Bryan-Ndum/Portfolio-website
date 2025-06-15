@@ -13,7 +13,7 @@ body {
   font-family: 'Share Tech Mono', monospace;
   background-color: var(--background);
   color: var(--text);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   letter-spacing: 0.4px;
 }
@@ -127,125 +127,7 @@ a:hover {
 .project-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-.project-card {
-  background: var(--accent);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-.project-card:hover {
-  transform: scale(1.02);
-}
-.project-card img {
-  width: 100%;
-  display: block;
-}
-.project-card h3 {
-  padding: 1rem;
-  margin: 0;
-  font-size: 1.3rem;
-}
-.project-card p {
-  padding: 0 1rem 1rem;
-  margin: 0;
-  color: var(--text);
-  font-size: 1.05rem;
-}
-
-/* === SKILLS === */
-.skills-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  text-align: center;
-}
-.skill-box {
-  background: var(--accent);
-  padding: 1.5rem;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-/* === CONTACT FORM === */
-form input,
-form textarea {
-  background: var(--accent);
-  border: none;
-  border-radius: 5px;
-  color: var(--text);
-  font-family: 'Share Tech Mono', monospace;
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.8rem;
-  font-size: 1.1rem;
-}
-form textarea {
-  resize: vertical;
-}
-form button[type="submit"] {
-  cursor: pointer;
-  font-size: 1.1rem;
-}
-
-/* === ANIMATIONS === */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s ease-out forwards;
-  animation-fill-mode: both;
-}
-.fade-in[style*="animation-delay"] {
-  animation-delay: inherit;
-}
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.typewriter {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  display: block;
-  border-right: none;
-  animation: typing 3s steps(30, end) forwards;
-  animation-fill-mode: forwards;
-}
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* === MOBILE RESPONSIVE === */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .menu-toggle {
-    display: block;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .nav-links li a {
-    display: block;
-    padding: 0.6rem 0;
-    font-size: 1.1rem;
-  }
-}
+  grid-template-columns: repeat(auto-fit, minmax(28
 
 
 
