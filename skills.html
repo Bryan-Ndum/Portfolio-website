@@ -2,43 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Skills | Bryan Ndum</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a2d9d6b1ad.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Load shared navbar -->
-  <div id="navbar-placeholder"></div>
 
-  <!-- Skills Section -->
-  <section class="section">
+  <section class="section fade-in">
     <h2>Core Skills</h2>
     <div class="skills-grid">
-      <div class="skill-box">Python</div>
-      <div class="skill-box">JavaScript</div>
-      <div class="skill-box">Bash</div>
-      <div class="skill-box">Linux</div>
-      <div class="skill-box">Git & GitHub</div>
-      <div class="skill-box">Docker</div>
-      <div class="skill-box">Wireshark</div>
-      <div class="skill-box">Open vSwitch (OVS)</div>
-      <div class="skill-box">P4 Programming</div>
-      <div class="skill-box">Mininet</div>
-      <div class="skill-box">Cloud Security</div>
-      <div class="skill-box">Threat Detection</div>
-      <div class="skill-box">Vulnerability Management</div>
-      <div class="skill-box">Incident Response</div>
+      <div class="skill-box">
+        <i class="fab fa-python"></i><br>Python
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-js"></i><br>JavaScript
+      </div>
+      <div class="skill-box">
+        <i class="fas fa-terminal"></i><br>Bash
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-linux"></i><br>Linux
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-git-alt"></i><br>Git
+      </div>
+      <div class="skill-box">
+        <i class="fas fa-network-wired"></i><br>Network Defense
+      </div>
+      <div class="skill-box">
+        <i class="fas fa-shield-alt"></i><br>Threat Detection
+      </div>
+      <div class="skill-box">
+        <i class="fas fa-cloud"></i><br>Cloud Security
+      </div>
+      <div class="skill-box">
+        <i class="fas fa-microchip"></i><br>P4 / OVS
+      </div>
+      <div class="skill-box">
+        <i class="fas fa-lock"></i><br>Vulnerability Mgmt
+      </div>
     </div>
   </section>
 
-  <!-- Scripts -->
-  <script>
-    fetch('navbar.html')
-      .then(res => res.text())
-      .then(html => { document.getElementById('navbar-placeholder').innerHTML = html; });
-  </script>
-  <script src="nav.js"></script>
+  <!-- 🔻 Footer Menu Starts Here -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Bryan Ndum. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/BryanNBN" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/bryanndum" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <!-- 🔺 Footer Menu Ends Here -->
+
 </body>
 </html>
-
