@@ -1,41 +1,52 @@
-/* === GLOBAL === */
+/* === CYBER THEME COLORS === */
+:root {
+  --primary: #00ffc3;
+  --hover: #66ffe0;
+  --background: #0a0f1a;
+  --text: #e6f1ff;
+  --accent: #161b22;
+  --border: #1f2937;
+}
+
+/* === GLOBAL RESET === */
 body {
   margin: 0;
   font-family: 'Share Tech Mono', monospace;
-  background-color: #0d1117;
-  color: #00ffcc;
-  line-height: 1.6;
+  background-color: var(--background);
+  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  letter-spacing: 0.4px;
 }
 a {
-  color: #00ffcc;
+  color: var(--primary);
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 a:hover {
-  color: #66ffe0;
+  color: var(--hover);
 }
 
 /* === NAVBAR === */
 .navbar {
-  background-color: #0d1117;
+  background-color: var(--background);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #1f2937;
+  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 .navbar h1 {
   font-size: 1.4rem;
-  font-weight: bold;
 }
 .menu-toggle {
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  color: #00ffcc;
+  color: var(--primary);
 }
 .nav-links {
   display: flex;
@@ -45,10 +56,10 @@ a:hover {
   padding: 0;
 }
 .nav-links li a:hover {
-  color: #66ffe0;
+  color: var(--hover);
 }
 
-/* === HERO === */
+/* === HERO SECTION === */
 .hero {
   min-height: 100vh;
   background: url('https://images.unsplash.com/photo-1614064642326-4443f3e6428c?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
@@ -62,7 +73,7 @@ a:hover {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(13, 17, 23, 0.85);
+  background: rgba(10, 15, 26, 0.85);
 }
 .hero-content {
   position: relative;
@@ -71,29 +82,31 @@ a:hover {
   padding: 2rem;
 }
 .hero-content h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 .hero-content p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
+
+/* === BUTTONS === */
 .btn {
   display: inline-block;
   background: transparent;
-  border: 2px solid #00ffcc;
-  color: #00ffcc;
+  border: 2px solid var(--primary);
+  color: var(--primary);
   padding: 0.8rem 2rem;
   font-weight: bold;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
 .btn:hover {
-  background: #00ffcc;
-  color: #0d1117;
+  background: var(--primary);
+  color: var(--background);
 }
 
-/* === SECTION === */
+/* === SECTIONS === */
 .section {
   padding: 4rem 2rem;
   max-width: 1000px;
@@ -102,10 +115,10 @@ a:hover {
 .section h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #00ffcc;
+  color: var(--primary);
 }
 .section p, .section ul {
-  color: #b2fefa;
+  color: var(--text);
 }
 .section ul {
   padding-left: 1rem;
@@ -118,10 +131,14 @@ a:hover {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 .project-card {
-  background: #161b22;
-  border: 1px solid #1f2937;
+  background: var(--accent);
+  border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.02);
 }
 .project-card img {
   width: 100%;
@@ -134,7 +151,7 @@ a:hover {
 .project-card p {
   padding: 0 1rem 1rem;
   margin: 0;
-  color: #b2fefa;
+  color: var(--text);
 }
 
 /* === SKILLS GRID === */
@@ -145,20 +162,20 @@ a:hover {
   text-align: center;
 }
 .skill-box {
-  background: #161b22;
+  background: var(--accent);
   padding: 1.5rem;
   border-radius: 8px;
-  border: 1px solid #1f2937;
+  border: 1px solid var(--border);
   font-weight: bold;
 }
 
 /* === FORM STYLES === */
 form input,
 form textarea {
-  background: #161b22;
+  background: var(--accent);
   border: none;
   border-radius: 5px;
-  color: #b2fefa;
+  color: var(--text);
   font-family: 'Share Tech Mono', monospace;
   width: 100%;
   margin-bottom: 1rem;
@@ -169,6 +186,34 @@ form textarea {
 }
 form button[type="submit"] {
   cursor: pointer;
+}
+
+/* === ANIMATION === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.typewriter h1 {
+  overflow: hidden;
+  border-right: .15em solid var(--primary);
+  white-space: nowrap;
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent }
+  50% { border-color: var(--primary) }
 }
 
 /* === RESPONSIVE === */
@@ -195,8 +240,6 @@ form button[type="submit"] {
     font-size: 1.1rem;
   }
 }
-
-
 
 
 
