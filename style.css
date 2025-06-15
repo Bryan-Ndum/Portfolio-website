@@ -123,7 +123,7 @@ a:hover {
   padding-left: 1rem;
 }
 
-/* === PROJECT GRID === */
+/* === PROJECTS === */
 .project-grid {
   display: grid;
   gap: 2rem;
@@ -146,14 +146,16 @@ a:hover {
 .project-card h3 {
   padding: 1rem;
   margin: 0;
+  font-size: 1.3rem;
 }
 .project-card p {
   padding: 0 1rem 1rem;
   margin: 0;
   color: var(--text);
+  font-size: 1.05rem;
 }
 
-/* === SKILLS GRID === */
+/* === SKILLS === */
 .skills-grid {
   display: grid;
   gap: 1.5rem;
@@ -166,9 +168,10 @@ a:hover {
   border-radius: 8px;
   border: 1px solid var(--border);
   font-weight: bold;
+  font-size: 1.1rem;
 }
 
-/* === FORM STYLES === */
+/* === CONTACT FORM === */
 form input,
 form textarea {
   background: var(--accent);
@@ -179,12 +182,14 @@ form textarea {
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.8rem;
+  font-size: 1.1rem;
 }
 form textarea {
   resize: vertical;
 }
 form button[type="submit"] {
   cursor: pointer;
+  font-size: 1.1rem;
 }
 
 /* === ANIMATIONS === */
@@ -203,7 +208,6 @@ form button[type="submit"] {
     transform: translateY(0);
   }
 }
-
 .typewriter {
   overflow: hidden;
   white-space: nowrap;
@@ -218,7 +222,7 @@ form button[type="submit"] {
   to { width: 100% }
 }
 
-/* === RESPONSIVE === */
+/* === MOBILE RESPONSIVE === */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
