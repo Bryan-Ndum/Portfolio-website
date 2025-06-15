@@ -3,39 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Bryan Ndum</title>
+  <title>About Me | Bryan Ndum</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 </head>
-
-<script>
-  function toggleMenu() {
-    const links = document.getElementById('nav-links');
-    links.classList.toggle('active');
-  }
-</script>
-
-<script>
-  fetch('navbar.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('navbar-placeholder').innerHTML = data;
-    });
-</script>
-<script src="nav.js"></script>
-
-
-  
-  <body>
-  <!-- Navbar -->
-<div id="navbar-placeholder"></div>
-
+<body>
+  <!-- Load shared navbar -->
+  <div id="navbar-placeholder"></div>
 
   <!-- About Section -->
   <section class="section">
     <h2>Who I Am</h2>
-    <p>I’m a senior Cybersecurity and Computer Science student at the University of North Carolina at Pembroke. I specialize in building secure systems, simulating attacks in SDN environments, and applying AI to solve cybersecurity challenges.</p>
-    <p>My work blends research, real-world projects, and mentoring underrepresented communities through technology.</p>
+    <p>I’m a senior Cybersecurity and Computer Science student at the University of North Carolina at Pembroke. I specialize in protecting digital infrastructure, simulating attacks using Software Defined Networking (SDN), and leveraging AI for security operations.</p>
+    <p>I'm originally from Cameroon and moved to the U.S. in 2021 to pursue my passion for technology and leadership in the cybersecurity space. My journey reflects a deep commitment to community empowerment, research, and innovation.</p>
   </section>
 
   <section class="section">
@@ -43,15 +23,23 @@
     <img src="https://images.unsplash.com/photo-1603574910925-978ee9fadb04?auto=format&fit=crop&w=1000&q=80" alt="cyber journey" style="width:100%; border-radius:8px; margin-bottom:2rem;">
     <ul>
       <li>🎓 Transferred from Cameroon to study tech in the U.S.</li>
-      <li>🛡️ Led research on DDoS attack detection in SDN using P4 and OVS</li>
-      <li>🏆 Built VenomAI — a red team AI assistant that won a hackathon</li>
-      <li>🌍 Founded AfroSecure — empowering African freelancers with digital safety</li>
+      <li>🛡️ Conducted research on SDN and P4 to detect DDoS attacks</li>
+      <li>🏆 Built VenomAI — an AI red-team assistant that won HackUNCP</li>
+      <li>🌍 Created AfroSecure — a security education app for African creators</li>
     </ul>
   </section>
 
   <section class="section">
     <h2>What Drives Me</h2>
-    <p>Security is more than code. It’s people, principles, and purpose. I’m driven by a passion to protect, to innovate, and to uplift — one protocol, one product, and one person at a time.</p>
+    <p>I’m driven by more than just code. My mission is to protect and empower — whether through building secure systems, educating underserved communities, or researching the future of cyber defense. Security is people, purpose, and power.</p>
   </section>
+
+  <!-- Scripts -->
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => { document.getElementById('navbar-placeholder').innerHTML = html; });
+  </script>
+  <script src="nav.js"></script>
 </body>
 </html>
