@@ -3,33 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bryan Ndum | Home</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Bryan Ndum | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="hero">
-    <nav class="navbar">
-      <div class="nav-container">
-        <h1 class="logo"><a href="index.html">Bryan Ndum</a></h1>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+  <section class="cyber-hero">
+    <!-- Optional online background image overlay -->
+    <div class="hero-bg"></div>
 
-    <div class="hero-text">
-      <h2><span class="typewriter"></span></h2>
-      <h3 class="fade-in">Crafting the Future, One Innovation at a Time</h3>
-      <p>From cybersecurity to creative tech, I build bridges between ideas and reality.</p>
-      <a href="projects.html" class="btn">Discover My World</a>
+    <div class="hero-content">
+      <h1 class="cyber-typewriter" id="cyber-type"></h1>
+      <p class="subtext">Cybersecurity | Network Defense | Ethical Hacking | AI Systems</p>
+      <a href="projects.html" class="cyber-btn">View My Work</a>
+
+      <!-- Optional Social Icons -->
+      <div class="social-links">
+        <a href="https://github.com/BryanNBN" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/bryanndum" target="_blank">LinkedIn</a>
+        <a href="mailto:bryan@example.com">Email</a>
+      </div>
     </div>
-  </header>
+  </section>
 
   <script>
-    document.querySelector('.typewriter').textContent = "Hi, I'm Bryan...";
+    const cyberText = \">> Initiating Portfolio: Bryan Ndum\";
+    let i = 0;
+    function typeCyber() {
+      if (i < cyberText.length) {
+        document.getElementById(\"cyber-type\").innerHTML += cyberText.charAt(i);
+        i++;
+        setTimeout(typeCyber, 60);
+      }
+    }
+    window.onload = typeCyber;
   </script>
 </body>
 </html>
+
