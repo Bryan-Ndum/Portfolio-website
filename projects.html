@@ -2,51 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | Bryan Ndum</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
 </head>
 <body>
-  <!-- Load shared navbar -->
-  <div id="navbar-placeholder"></div>
 
-  <!-- Projects Section -->
-  <section class="section">
+  <section class="section fade-in">
     <h2>Featured Projects</h2>
     <div class="project-grid">
-
       <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1581093588401-3a11f2ed1d69?auto=format&fit=crop&w=900&q=80" alt="VenomAI">
+        <img src="https://source.unsplash.com/featured/?cybersecurity,ai" alt="VenomAI" />
         <h3>VenomAI</h3>
-        <p>An AI-powered red team assistant that automates reconnaissance, attack simulation, and countermeasures. Built to simulate real-world threats. 🧠</p>
+        <p>An AI-powered red teaming tool for simulating evasive cyberattacks and testing defenses.</p>
+        <a href="https://github.com/BryanNBN/VenomAI" target="_blank" class="btn">View on GitHub</a>
       </div>
 
       <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1667382028353-63ccdbdd5e6e?auto=format&fit=crop&w=900&q=80" alt="AfroSecure">
+        <img src="https://source.unsplash.com/featured/?africa,technology" alt="AfroSecure" />
         <h3>AfroSecure</h3>
-        <p>A cybersecurity education app tailored to African freelancers, streamlining digital literacy and scam awareness across the continent. 🌍</p>
+        <p>A mobile app that raises cybersecurity awareness across Africa with real-time scam alerts.</p>
+        <a href="#" class="btn">Demo Coming Soon</a>
       </div>
 
       <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1624431894000-9d1ddee49c8a?auto=format&fit=crop&w=900&q=80" alt="SDN Research">
-        <h3>SDN DDoS Simulation</h3>
-        <p>Simulated DDoS attacks using P4, Mininet, and OVS to test reactive defenses in programmable networks. 🛡️</p>
+        <img src="https://source.unsplash.com/featured/?hacker,network" alt="SDN Research" />
+        <h3>SDN DDoS Research</h3>
+        <p>Simulated attacks using P4, Mininet, and Open vSwitch to detect and mitigate DDoS in SDN.</p>
+        <a href="#" class="btn">Read Research PDF</a>
       </div>
 
       <div class="project-card">
-       
+        <img src="https://source.unsplash.com/featured/?blockchain,finance" alt="ZegsPay" />
+        <h3>ZegsPay</h3>
+        <p>A blockchain-powered remittance app enabling fast, low-fee money transfers across continents.</p>
+        <a href="#" class="btn">Explore Prototype</a>
       </div>
-
     </div>
   </section>
 
-  <!-- Scripts -->
-  <script>
-    fetch('navbar.html')
-      .then(res => res.text())
-      .then(html => { document.getElementById('navbar-placeholder').innerHTML = html; });
-  </script>
-  <script src="nav.js"></script>
+  <!-- 🔻 Footer Menu Starts Here -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Bryan Ndum. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/BryanNBN" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/bryanndum" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <!-- 🔺 Footer Menu Ends Here -->
+
 </body>
 </html>
