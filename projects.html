@@ -3,30 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects</title>
+  <title>Projects | Bryan Ndum</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
-    <div class="nav-container">
-      <h1 class="logo"><a href="index.html">Bryan Ndum</a></h1>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+    <h1>Bryan Ndum</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+    </ul>
   </nav>
 
-  <section class="content">
-    <h2>Projects</h2>
-    <ul class="projects-list">
-      <li><strong>VenomAI:</strong> AI-powered red team simulator (HackUNCP Winner)</li>
-      <li><strong>AfroSecure:</strong> Security app for African freelancers</li>
-      <li><strong>SDN Research:</strong> DDoS attack simulations using P4</li>
-      <li><strong>ZegsPay:</strong> Blockchain remittance from Cameroon to the US</li>
-    </ul>
+  <!-- Projects Section -->
+  <section class="section">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1581093588401-3a11f2ed1d69?auto=format&fit=crop&w=900&q=80" alt="VenomAI">
+        <h3>VenomAI</h3>
+        <p>AI-powered red team assistant that automates reconnaissance, attack simulation, and defensive countermeasures. Built for competition and won HackUNCP.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1667382028353-63ccdbdd5e6e?auto=format&fit=crop&w=900&q=80" alt="AfroSecure">
+        <h3>AfroSecure</h3>
+        <p>Cybersecurity education and scam awareness app tailored for African freelancers and creators. Built to empower and protect underserved tech communities.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1624431894000-9d1ddee49c8a?auto=format&fit=crop&w=900&q=80" alt="SDN Research">
+        <h3>SDN DDoS Simulation</h3>
+        <p>Designed and simulated DDoS attacks in Software Defined Networks using P4 and Open vSwitch. Evaluated prevention strategies in programmable environments.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1638764456815-e17c7147506b?auto=format&fit=crop&w=900&q=80" alt="ZegsPay">
+        <h3>ZegsPay</h3>
+        <p>Blockchain remittance platform for fast, secure money transfers between Cameroon and the U.S. Integrated mobile money and smart contract logic.</p>
+      </div>
+
+    </div>
   </section>
 </body>
 </html>
