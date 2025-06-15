@@ -11,6 +11,17 @@
 </body>
 </html>
 
+<script>
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    });
+</script>
+<script src="nav.js"></script>
+
+
+
 <body
 
   <div id="navbar-placeholder"></div>
