@@ -1,4 +1,3 @@
-
 :root {
   --primary: #00ffc3;
   --hover: #66ffe0;
@@ -18,7 +17,6 @@ body {
   line-height: 1.8;
   letter-spacing: 0.4px;
 }
-
 a {
   color: var(--primary);
   text-decoration: none;
@@ -85,25 +83,38 @@ a:hover {
 }
 .hero-content p {
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin: 1.5rem 0 2rem;
 }
 
-/* TYPEWRITER ANIMATION */
-.typewriter {
+/* TYPEWRITER ANIMATIONS */
+.typewriter-line1,
+.typewriter-line2 {
+  font-size: 1.8rem;
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid var(--primary);
   width: 0;
-  font-size: 1.8rem;
   max-width: 100%;
-  animation: typing 4.2s linear forwards, blink 0.75s step-end 8;
 }
-@keyframes typing {
+
+.typewriter-line1 {
+  animation: typing1 3s steps(35, end) forwards, blink 0.75s step-end 6;
+}
+
+.typewriter-line2 {
+  animation: typing2 2.5s steps(25, end) 3.2s forwards, blink 0.75s step-end 6 3.2s;
+}
+
+@keyframes typing1 {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes typing2 {
   from { width: 0 }
   to { width: 100% }
 }
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% { border-color: transparent }
 }
 
 /* BUTTON */
@@ -184,8 +195,7 @@ a:hover {
     font-size: 1.1rem;
   }
   .hero-content h1 {
-    font-size: 1.6rem;
-    line-height: 2.2rem;
+    font-size: 1.5rem;
   }
   .hero-content p {
     font-size: 1rem;
@@ -200,12 +210,4 @@ a:hover {
     gap: 0.8rem;
   }
 }
-
-
-
-
-
-
-
-
 
