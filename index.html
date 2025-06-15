@@ -8,16 +8,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Load shared navbar -->
+  <!-- Navbar -->
   <div id="navbar-placeholder"></div>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-overlay"></div>
-    <div class="hero-content typewriter">
-      <h1>Hello, welcome to my portfolio. I am Bryan Ndum.</h1>
-      <p class="fade-in">Cybersecurity | Network Defense | Ethical Hacking | AI Systems</p>
-      <a href="about.html" class="btn fade-in">Learn More About Me</a>
+    <div class="hero-content">
+      <h1 class="typewriter">Hello, welcome to my portfolio.</h1>
+      <h1 class="typewriter" style="animation-delay: 3.2s;">I am Bryan Ndum.</h1>
+      <p class="fade-in" style="animation-delay: 6s;">Cybersecurity | Network Defense | Ethical Hacking | AI Systems</p>
+      <a href="about.html" class="btn fade-in" style="animation-delay: 7s;">Learn More About Me</a>
     </div>
   </section>
 
@@ -25,10 +26,11 @@
   <script>
     fetch('navbar.html')
       .then(res => res.text())
-      .then(html => { document.getElementById('navbar-placeholder').innerHTML = html; });
+      .then(html => {
+        document.getElementById('navbar-placeholder').innerHTML = html;
+      });
   </script>
   <script src="nav.js"></script>
 </body>
 </html>
-
 
